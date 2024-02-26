@@ -1,28 +1,36 @@
-// Clasa Ajutor
-class Ajutor {
-    // Funcția pentru afișarea mesajului "Hello, World!"
-    void afisare() {
-        System.out.println("Hello, World!");
-    }
-
-    // Funcția pentru afișarea informațiilor despre proiect
-    void info() {
-        System.out.println("Nume: Proiect Java");
-        System.out.println("Facultate: Facultatea de Informatică");
-        System.out.println("Autor: Razvan");
-    }
-}
-
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         // Crearea unei instanțe a clasei Ajutor
         Ajutor ajutor = new Ajutor();
 
-        // Apelarea funcției afisare din clasa Ajutor
-        ajutor.afisare();
+        // Crearea unui obiect Scanner pentru citirea de la tastatură
+        Scanner scanner = new Scanner(System.in);
+        String input;
 
-        // Apelarea funcției info din clasa Ajutor
-        ajutor.info();
+        // Folosim un ciclu infinit pentru a permite citirea repetată de la tastatură
+        while (true) {
+            // Citirea stringului de la tastatură
+            System.out.println("Introduceți un string (hello, info, exit): ");
+            input = scanner.nextLine();
+
+            // Verificăm valoarea stringului și acționăm în funcție de aceasta
+            if (input.equals("hello")) {
+                ajutor.afisare();
+            } else if (input.equals("info")) {
+                ajutor.info();
+            } else if (input.equals("exit")) {
+                // Dacă stringul este "exit", oprim programul
+                System.out.println("Programul se oprește...");
+                break;
+            } else {
+                // Dacă stringul nu este niciuna dintre valorile așteptate, îl afișăm
+                System.out.println("Stringul introdus este: " + input);
+            }
+        }
+
+        // Închidem scanner-ul după ce am terminat de folosit
+        scanner.close();
     }
 }
