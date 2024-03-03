@@ -30,7 +30,7 @@ public class Main {
             }
         }
 
-
+        //ceva nou
         scanner.close();
     }
 }
