@@ -1,0 +1,33 @@
+# Fișiere și directoare generale care să fie ignorate
+/node_modules
+/dist
+/.vscode
+/.idea
+/.DS_Store
+
+# Fișiere specifice de configurare locală
+.env
+.env.local
+.env.*.local
+
+# Fișiere generate automat
+/build
+.DS_Store
+
+# Fișiere de sistem
+Thumbs.db
+
+# Loguri și fișiere temporare
+*.log
+*.tmp
+
+# Fișiere de dependențe generate automat
+package-lock.json
+yarn.lock
+
+# Fișiere de configurare pentru anumite IDE-uri și editor de text
+/.vscode
+/.idea
+*.sublime-project
+*.sublime-workspace
+
